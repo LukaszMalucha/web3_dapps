@@ -30,4 +30,8 @@ https://metamask.io/
 
 `truffle migrate`
 
+### Truffle Console
+
+`todoList = await TodoList.deployed()`
+
 
