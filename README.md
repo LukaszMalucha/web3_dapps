@@ -34,4 +34,13 @@ https://metamask.io/
 
 `todoList = await TodoList.deployed()`
 
+`todoList.address`
+
+`todoList.count`
+`taskCount = await todoList.taskCount()`
+`taskCount.toNumber()`
+`task = await todoList.tasks(1)`
+`task.id.toNumber()`
+
+
 
