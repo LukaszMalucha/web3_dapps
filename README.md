@@ -1,7 +1,7 @@
 # Web 3.0 Dapps
 
 
-## Requirements
+## Web3.js
 
 #### Ganache
 
@@ -57,5 +57,9 @@ deploy contract to Ganache account
 Connect MetaMask to Ganache account
 
 
+## Web3.py
 
+
+### Connect to Ethereum Node
+`https://infura.io`
 
