@@ -32,6 +32,8 @@ https://metamask.io/
 
 ### Truffle Console
 
+`truffle console`
+
 `todoList = await TodoList.deployed()`
 
 `todoList.address`
@@ -41,6 +43,19 @@ https://metamask.io/
 `taskCount.toNumber()`
 `task = await todoList.tasks(1)`
 `task.id.toNumber()`
+
+
+
+## STEPS
+
+npm run dev
+
+Turn on Ganache
+
+deploy contract to Ganache account
+
+Connect MetaMask to Ganache account
+
 
 
 
