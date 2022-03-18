@@ -5,11 +5,11 @@ import environ
 env = environ.Env(DEBUG=(bool, False))
 environ.Env.read_env()
 
-web3 = Web3(Web3.HTTPProvider(infura_url))
+web3 = Web3(Web3.HTTPProvider(env("INFURA_URL")))
 
 print(web3.isConnected())
 
 print(web3.eth.blockNumber)
 
-balance = web3.eth.getBalance("zxczxczxc")
+balance = web3.eth.getBalance(env("ETHEREUM_WALLET"))
 print(web3.fromWei(balance, 'ether'))

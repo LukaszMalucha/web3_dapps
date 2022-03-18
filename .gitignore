@@ -6,7 +6,7 @@ venv/*
 .idea/*
 *.env
 _old/*
-
+db.sqlite3
 .DS_Store
 node_modules
 /dist
