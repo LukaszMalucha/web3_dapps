@@ -4,11 +4,12 @@
 
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Play', sans-serif;
+    background-image: url('https://flask-static-files.s3.eu-west-1.amazonaws.com/static/img/background.png');
     position: relative;
     margin: 0;
     padding-bottom: 0;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 html {

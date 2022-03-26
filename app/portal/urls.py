@@ -12,5 +12,6 @@ urlpatterns = [
       path('accounts/', include('allauth.urls')),
       path('auth/', include('dj_rest_auth.urls')),
       path('auth/registration/', include('dj_rest_auth.registration.urls')),
+      path('auth/', include('user.urls')),
       re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point")
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

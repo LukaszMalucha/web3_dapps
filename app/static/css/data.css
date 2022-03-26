@@ -1,3 +1,195 @@
 /*------------------------------------------------------------------------------
+    DASHBOARD
+------------------------------------------------------------------------------*/
+
+
+.dashboard-cards {
+    border: none;
+    text-align: center;
+    box-shadow: none;
+    width: 60%;
+    margin: auto;
+    padding: 0px 0px 60px 0px;
+}
+
+/*------------------------------------------------------------------------------
+    DASHBOARD ROWS
+------------------------------------------------------------------------------*/
+
+.row-title {
+    width: 100%;
+    margin: 20px 0px 40px 0px;
+    text-align: center;
+}
+
+.page-title-container {
+    width: 80%;
+    margin: auto;
+}
+
+
+/*------------------------------------------------------------------------------
     DASHBOARD CARDS
 ------------------------------------------------------------------------------*/
+
+.card-menu {
+    width: 94%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+.card .card-content {
+    padding: 12px 8px;
+    height: 106px;
+}
+
+.card .card-image {
+  position: relative;
+}
+
+.card .card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.card .card-content {
+  padding: 12px 8px;
+  height: 106px;
+}
+.card .card-content {
+  padding: 18px;
+  border-radius: 0 0 2px 2px;
+}
+
+.card-menu .card-content p {
+  color: black;
+  font-size: 11px;
+  min-height: 30px;
+}
+
+.card-menu .card-content .card-title {
+  color: #1e3242;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.card .card-content .card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+
+
+
+.insights-card {
+    box-shadow: none;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    float: none;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 1px 3px 0 #bbbbbb,0 1px 1px 0 #cbcbcb,0 2px 1px -1px #d0d0d0;
+}
+
+
+
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+
+
+
+
+@media(max-width:1700px) {
+
+    #page-index {
+        padding-top: 0px;
+    }
+
+    .dashboard-cards {
+        width: 95%;
+    }
+
+    .row-title {
+        width: 100%;
+        font-size: 2rem;
+
+    }
+
+    .row-cards {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card-menu {
+        width: 90%;
+    }
+
+}
+
+
+
+@media(max-width:1440px) {
+
+  .dashboard-cards {
+    width: 90%;
+  }
+
+
+  .card-menu .card-content .card-title {
+      font-size: 12px;
+      line-height: 16px;
+      height: 32px;
+  }
+
+  .card-menu .card-content p {
+      min-height: 50px;
+      font-size: 10px;
+  }
+
+  .card .card-content {
+      padding: 8px 4px;
+  }
+
+}
+
+@media(max-width:1025px) {
+
+  .dashboard-cards {
+    width: 100%;
+  }
+
+  .card-menu .card-content .card-title {
+      font-size: 16px;
+  }
+
+}
+
+@media(max-width:767px) {
+
+
+    .card-menu {
+        width: 80%;
+    }
+
+
+
+}
