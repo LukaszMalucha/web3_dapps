@@ -90,33 +90,112 @@
   margin-bottom: 8px;
 }
 
-
-
-
 .insights-card {
-    box-shadow: none;
-    text-align: left;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    float: none;
-    border-radius: 5px;
-    font-size: 12px;
-    letter-spacing: 0.4px;
-    box-shadow: 0 1px 3px 0 #bbbbbb,0 1px 1px 0 #cbcbcb,0 2px 1px -1px #d0d0d0;
+  box-shadow: none;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  margin-bottom: 30px;
+  float: none;
+  border-radius: 5px;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  box-shadow: 0 1px 3px 0 #bbbbbb,0 1px 1px 0 #cbcbcb,0 2px 1px -1px #d0d0d0;
 }
 
 
+.insights-card-left {
+  width: 96%;
+  margin-left: 0;
+  margin-right: 4%;
+}
+
+
+.insights-card .card-header {
+  padding: 6px 8px 6px 8px;
+  margin-bottom: 6px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 0px solid rgba(0,0,0,.125);
+}
+
+.insights-card .card-header h6 {
+  margin-left: 0px;
+  margin-top: 6px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #303438;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.insights-card .card-header p {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  font-size: 10px;
+  color: #868686;
+  letter-spacing: 0.4px;
+  text-transform: none;
+}
+
+
+.insights-card textarea {
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #0c0d0e;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  padding: 4px;
+  font-size: 16px;
+  height: 32px;
+
+}
+
+.insights-card .col-form h6 {
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #303438;
+}
 
 
 /*------------------------------------------------------------------------------
     BUTTONS
 ------------------------------------------------------------------------------*/
 
+.btn-form {
+  font-family: 'Play', sans-serif;
+  background-color: #0054a0;
+  border-radius: 3px;
+  font-weight: 500;
+  height: 30px !important;
+  line-height: 28px !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-top: 2px;
+  margin-left: 20px;
+  padding: 0px 20px;
+  color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1),0 1px 4px rgba(0,0,0,0.1),0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-form:hover,
+.btn-form:active,
+.btn-form:focus {
+  background-color: #4571b1;
+  color: #ffffff;
+}
 
 
-
-
+/*------------------------------------------------------------------------------
+    RESPONSIVITY
+------------------------------------------------------------------------------*/
 
 @media(max-width:1700px) {
 

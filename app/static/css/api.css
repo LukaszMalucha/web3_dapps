@@ -3,13 +3,12 @@
 ------------------------------------------------*/
 
 body {
-    font-family: 'Play', sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
     margin: 0;
     padding-bottom: 0;
-    background-color: #e6ecf0;
-    background-image: url('../../static/img/background_form.png');
-    background-size: cover;
+    background-color: #c4c4c4;
+
 }
 
 .wrapper {
@@ -41,7 +40,7 @@ body {
 
 h1,
 .page-header {
-    color: #83ab41;
+    color: #003f67;
     margin: 10px 0px 10px 0px;
     border: none;
 }
@@ -49,16 +48,11 @@ h1,
 
 
 .btn {
-    background-color: #83ab41;
+    background-color: #003f67;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 400;
+    color: #fff;
 }
-
-.region .btn-default {
-  margin-top: 5px !important;
-  margin-right: 1em !important;
-}
-
 
 .welcome .btn {
     margin: 10px;
@@ -74,16 +68,9 @@ primary:active:focus,
 .btn:hover,
 .btn:focus,
 .btn:active {
-    background-color: #6d8f36;
+    background-color: #102332;
 }
 
-.button-form {
-    margin-top: 5px;
-}
-
-.btn-danger {
-    background-color: #cf0d16;
-}
 
 .btn-danger:hover,
 .btn-danger:focus,
@@ -103,7 +90,7 @@ p {
 
 
 .route {
-    font-weight: normal;
+    font-weight: 400;
     width: 100%;
     font-size: 0.8rem;
 }
@@ -114,58 +101,21 @@ btn-default:focus,
 .route:hover,
 .route:active,
 .route:focus {
-    background-color: #6d8f36;
+    background-color: #102332;
     color: white;
 }
 
 
-#deleteModal {
-    width: 35%;
-    background-color: transparent;
-    box-shadow: none;
+.view-row {
+    padding-left: 25px;
 }
-
-.modal .modal-footer {
-    background-color: transparent;
-    border: none;
-}
-
-
-/*------------------------------------------------------------------------------
-    TOP NAVBAR
-------------------------------------------------------------------------------*/
 
 nav {
-    background-color: transparent;
-    box-shadow: none;
+  background: #000000;
+  box-shadow: none;
+
 }
 
-.pagination>.active>a,
-.pagination>.active>a:focus,
-.pagination>.active>a:hover {
-    background-color: #83ab41;
-    border-color: #83ab41;
-}
-
-.navbar .nav li a{
-    color: black;
-}
-
-
-.navbar-default .navbar-nav > li > a:hover {
-    color: #919932;
-    background-color: transparent;
-}
-
-
-.navbar-text {
-    margin: 0px;
-}
-
-#user {
-    padding-right: 0px;
-    color: #24292e;
-}
 /*------------------------------------------------------------------------------
     BREADCRUMB
 ------------------------------------------------------------------------------*/
@@ -186,7 +136,6 @@ ul.breadcrumb {
 .breadcrumb li.active a:hover {
     color: grey;
 }
-
 
 
 /*------------------------------------------------------------------------------
@@ -219,15 +168,45 @@ ul.breadcrumb {
 }
 
 
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover {
-    color: black;
+#filtersModal {
+    width: 30%;
+    background: transparent;
+    padding: 0px;
 }
 
-.nav-tabs {
-    border: none;
+#filtersModal .btn-default {
+    height: 42px;
+    margin-top: -10px;
 }
+
+
+
+#filtersModal h2 {
+    font-size: 2.4rem;
+}
+
+.input-group .form-control:first-child {
+    background: #f7f7f9;
+}
+
+.modal-dialog {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.modal-header {
+    display: none;
+}
+
+.list-group {
+    width: 88%;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: #102332 !important;
+    border-color: #102332 !important;
+}
+
 
 
 /*------------------------------------------------------------------------------
@@ -282,13 +261,339 @@ input.invalid[type="number"]:not(.browser-default) {
 }
 
 
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover {
 
-    background-color: #fff;
-    border: 1px solid #acacae;
-    border-bottom-color: transparent;
+/*------------------------------------------------------------------------------
+    TOP NAVBAR
+------------------------------------------------------------------------------*/
+
+.navbar {
+	border-radius: 0px;
+}
+
+.navbar-header a {
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 36px;
+	margin-top: 0px;
+	font-weight: 400;
+	display: block;
+	color: #fff;
+}
+
+.top-navbar {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 300;
+	border: none;
+	height: 36px;
+	min-height: 36px;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	border: none;
+}
+
+.navbar-brand .material-icons {
+	color: #1a2026;
+}
+
+
+/*------------------------------------------------------------------------------
+    LEFT-SIDE HEADER AREA
+------------------------------------------------------------------------------*/
+
+
+.top-navbar .navbar-brand {
+	margin: 0px;
+	height: 36px;
+	float: left;
+	text-align: left;
+	padding: 0px;
+	font-weight: 400;
+	color: #fff;
+	background: transparent;
+	text-transform: uppercase;
+}
+
+.navbar-header {
+	width: 200px;
+	margin-left: 0px;
+	float: left;
+}
+
+.navbar-brand .material-icons,
+.navbar-brand .fab {
+	float: left;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-top: -3px;
+	letter-spacing: 1px;
+	height: auto;
+	background: #0077b5;
+	padding: 3px 3px 3px 3px;
+	color: #fff;
+	font-weight: normal;
+}
+
+.navbar-header:hover,
+.navbar-header:focus {
+	background: transparent;
+	color: #00539E;
+}
+
+
+.navbar-header a:hover {
+	text-decoration: none !important;
+}
+
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	background-color: transparent;
+	outline: 0px;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #00539E;
+}
+
+.navbar-default .navbar-brand:hover .navbar-default .navbar-brand:focus {
+	color: #e5ebef;
+}
+
+
+/*------------------------------------------------------------------------------
+    RIGHT SIDE LINKS
+------------------------------------------------------------------------------*/
+
+
+nav ul a {
+ font-size: 12px;
+ letter-spacing: 0.4px;
+ color: #253443;
+ text-transform: uppercase;
+}
+
+.nav-link {
+	height: 100% !important;
+	margin: 0px;
+	padding: 12px 12px !important;
+	color: #253443 !important;
+}
+
+.nav i,
+.nav i.material-icons {
+	height: 12px;
+	font-size: 12px;
+	margin-right: 6px;
+}
+
+.navbar-brand > img {
+  display: initial;
+}
+
+.img-logo {
+  height: 24px;
+  line-height: 40px;
+}
+
+
+.top-navbar .navbar-right {
+	width: auto;
+	height: 36px;
+	margin: 0px;
+	line-height: 1;
+	padding: 0px;
+	color: #fff;
+	float: right !important;
+}
+
+.top-navbar .navbar-right>a {
+	padding: 0px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.top-navbar .navbar-right>a>i {
+	margin-right: 5px;
+	font-size: 16px;
+	height: 36px;
+}
+
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+	text-decoration: none;
+	outline: 0px;
+}
+
+
+nav ul a:hover {
+	background-color: #102332;
+	color: #fff;
+}
+
+nav ul li:hover,
+nav ul li:active {
+	background: transparent;
+	color: #fff;
+}
+
+
+nav ul a:hover {
+	color: #fff;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus,
+.nav>li>a:active {
+	background-color: transparent;
+	color: #fff;
+}
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+	background: #102332;
+	color: #0a58ca;
+}
+
+
+.nav-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0px 0px 0px 8px;
+  height: 12px;
+	margin: 12px 0px 11px 0px;
+  background: none !important;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button i {
+  position: relative;
+  top: 1px;
+
+}
+
+.btn-logout {
+  margin: 13px 0px 11px 0px;
+}
+
+
+/*------------------------------------------------------------------------------
+    DROPDOWN
+------------------------------------------------------------------------------*/
+
+
+.drop-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.5s linear;
+  position: relative;
+  background-color: #003f67;
+  width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 10px;
+}
+
+
+.drop-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.drop-content a:hover {
+  background-color: #102332;
+}
+
+
+
+.dropdown:hover .drop-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*------------------------------------------------------------------------------
+    HAMBURGER
+------------------------------------------------------------------------------*/
+
+
+.topnav {
+  display: none;
+  overflow: hidden;
+  background-color: #003f67;
+  position: relative;
+
+}
+
+
+.topnav #myLinks {
+  display: none;
+}
+
+
+.topnav a {
+  color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.topnav .nav-button {
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+  margin: 0px;
+  padding: 14px 16px;
+  height: auto;
+}
+
+.topnav .nav-button:hover {
+  color: #fff;
+}
+
+.topnav .img-logo {
+  margin: 0px;
+}
+
+.topnav a.icon {
+  background: #003f67;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 12px !important;
+}
+
+.topnav a:hover {
+  color: #fff;
+
+}
+
+.topnav .navbar-brand {
+  padding: 12px 12px 0px 12px !important;
+}
+
+
+.topnav .active {
+  background-color: #4CAF50;
+  color: white;
 }
 
 
