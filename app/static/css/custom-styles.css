@@ -108,6 +108,7 @@ a:hover {
 
 .error {
   color: red;
+  height: 21px !important;
 }
 
 .row-no-data {
@@ -137,6 +138,15 @@ select {
 
 }
 
+.span-function:hover {
+  color: #0a58ca;
+  cursor: pointer;
+}
+
+
+.font-green {
+  color: #57a050 !important;
+}
 
 
 /*------------------------------------------------------------------------------

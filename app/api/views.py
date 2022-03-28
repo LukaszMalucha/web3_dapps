@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 import pandas as pd
-
+from django.conf import settings
 
 
 
@@ -13,12 +13,30 @@ class AccountBalanceView(views.APIView):
     permission_classes = (AllowAny,)
 
     def get(self, request):
-        return Response({"message": "Check Account Balance"}, status=status.HTTP_200_OK)
+
+        default_wallet = settings.ETHEREUM_WALLET
+
+        if default_wallet:
+            response = {"message": "Check Account Balance", "default_wallet": f"{default_wallet}"}
+        else:
+            response = {"message": "Check Account Balance"}
+
+        return Response(response, status=status.HTTP_200_OK)
+
+
+
 
     def post(self, request):
-        wallet_id = request.data["wallet_id"]
 
-        return Response({"message": f"{wallet_id}"}, status=status.HTTP_200_OK)
+        wallet_address = request.data["wallet_address"]
+
+        web3 = settings.WEB3
+        balance = web3.eth.getBalance(wallet_address)
+        # balance_eth = web3.fromWei(balance, 'ether')
+
+
+
+        return Response({"account_balance": f"{balance}"}, status=status.HTTP_200_OK)
 
 
 

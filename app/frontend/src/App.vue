@@ -5,20 +5,21 @@
 </template>
 
 <script>
-import { mapActions, } from 'vuex';
+import { mapActions, } from "vuex";
 
 export default {
     name: "App",
     components: {
     },
     methods: {
-      ...mapActions(['getUserInfo']),
+      ...mapActions(["getUserInfo", "fetchDefaultAccountInfo"]),
     },
     computed: {
 
     },
     created() {
         this.getUserInfo();
+        this.fetchDefaultAccountInfo();
     }
 }
 </script>

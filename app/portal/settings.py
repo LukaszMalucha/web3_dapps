@@ -14,6 +14,7 @@ import os
 import environ
 import dj_database_url
 from pathlib import Path
+from web3 import Web3
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -187,6 +188,16 @@ WEBPACK_LOADER = {
         "STATS_FILE": os.path.join(BASE_DIR, "frontend", "webpack-stats.json"),
     }
 }
+
+
+# WEB3 SETTINGS
+
+WEB3 = Web3(Web3.HTTPProvider(env("INFURA_URL")))
+
+if "ETHEREUM_WALLET" in os.environ:
+    ETHEREUM_WALLET = env("ETHEREUM_WALLET")
+else:
+    ETHEREUM_WALLET = None
 
 
 # DEPLOYMENT
