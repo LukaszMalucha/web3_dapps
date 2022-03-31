@@ -19,6 +19,19 @@
             </div>
           </router-link>
         </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-3">
+          <router-link :to="{name: 'token-supply'}">
+            <div class="card card-menu">
+              <div class="card-image">
+                <img src="https://flask-static-files.s3.eu-west-1.amazonaws.com/static/img/tokens.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Token Supply</span>
+                <p>Check supply of most popular ETH tokens</p>
+              </div>
+            </div>
+          </router-link>
+        </div>
 
     </div>
   </div>

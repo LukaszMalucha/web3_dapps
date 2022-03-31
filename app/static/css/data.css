@@ -40,7 +40,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     padding-left: 0px !important;
-    width: 100%;
+    width: auto;
 }
 
 .row-back a {
@@ -186,7 +186,23 @@
   padding: 4px;
   font-size: 16px;
   height: 32px;
+}
 
+.insights-card select {
+  display: block !important;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  height: 30px;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 2px 6px;
+  color: #0c0d0e;
+  font-weight: 500;
+  width: 100%;
+  font-family: 'Play', sans-serif;
 }
 
 .insights-card .col-form h6 {
@@ -201,7 +217,7 @@
   border-radius: 5px;
   padding: 10px;
   padding: 2px;
-  height: 619px;
+  min-height: 300px;
 }
 
 .table-crypto {

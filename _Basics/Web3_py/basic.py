@@ -7,8 +7,10 @@ environ.Env.read_env()
 
 web3 = Web3(Web3.HTTPProvider(env("INFURA_URL")))
 
+# Is Connected
 print(web3.isConnected())
 
+# Current Block Number
 print(web3.eth.blockNumber)
 
 balance = web3.eth.getBalance(env("ETHEREUM_WALLET"))

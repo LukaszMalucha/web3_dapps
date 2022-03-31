@@ -3,6 +3,7 @@ import Vue from 'vue';
 import common from './modules/common';
 
 import account from './modules/account';
+import tokens from './modules/tokens';
 
 import user from './modules/user';
 
@@ -13,6 +14,7 @@ export default new Vuex.Store({
   modules: {
     common,
     account,
+    tokens,
     user,
   }
 });

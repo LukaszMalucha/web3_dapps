@@ -16,6 +16,16 @@ export default {
     return apiService(endpoint, "POST", payload);
   },
 
+//  Tokens
+  tokens() {
+    let endpoint = "/api/tokens/";
+    return apiService(endpoint);
+  },
+  totalSupply(payload) {
+    let endpoint = "/api/token-supply/";
+    return apiService(endpoint, "POST", payload);
+  },
+
 //  Pagination
   nextPage(next) {
     let endpoint = next;
