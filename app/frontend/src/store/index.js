@@ -4,6 +4,7 @@ import common from './modules/common';
 
 import account from './modules/account';
 import tokens from './modules/tokens';
+import transactions from './modules/transactions';
 
 import user from './modules/user';
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
     common,
     account,
     tokens,
+    transactions,
     user,
   }
 });

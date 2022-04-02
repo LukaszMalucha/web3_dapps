@@ -12,9 +12,10 @@ from api.serializers import TokenModelSerializer
 import json
 
 
+
 class TokenModelViewSet(viewsets.ModelViewSet):
     """Viewset for Token Model"""
-    permission_classes = (IsAdminOrReadOnly, IsAuthenticated)
+    permission_classes = (IsAdminOrReadOnly,)
     serializer_class = TokenModelSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend)
     filterset_fields = ["name","ticker" ]
@@ -92,3 +93,59 @@ class TokenSupplyView(views.APIView):
 
 
         return Response({"total_supply": f"{total_supply}", "symbol": f"{symbol}"}, status=status.HTTP_200_OK)
+
+
+class SendEthereumView(views.APIView):
+    """View for Sending Ethereum"""
+    authentication_classes = (authentication.TokenAuthentication, authentication.SessionAuthentication)
+    permission_classes = (AllowAny,)
+
+    def get(self, request):
+
+        return Response({"message": "Send Ethereum"}, status=status.HTTP_200_OK)
+
+
+    def post(self, request):
+
+        sender_address = request.data["sender_address"]
+        private_key = request.data["private_key"]
+        receiver_address = request.data["receiver_address"]
+        amount = request.data["amount"]
+        gas = request.data["gas"]
+
+
+        # TURN ON GANACHE
+        web3 = settings.GANACHE_WEB3
+
+
+
+
+        # Sign transaction
+
+
+        # Send transaction
+        try:
+
+            # Get the nonce
+            nonce = web3.eth.getTransactionCount(sender_address)
+
+            # Build transaction
+            tx = {
+                "nonce": nonce,
+                "to": receiver_address,
+                "value": web3.toWei(amount, "ether"),
+                "gas": int(gas),
+                "gasPrice": web3.toWei('50', 'gwei')
+            }
+            signed_tx = web3.eth.account.signTransaction(tx, private_key)
+            tx_hash = web3.eth.sendRawTransaction(signed_tx.rawTransaction)
+            tx_hash = web3.toHex(tx_hash)
+            return Response({"tx_hash": f"{tx_hash}"}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            error = str(e)
+            return Response({"error": f"{error}"}, status=status.HTTP_200_OK)
+
+
+
+

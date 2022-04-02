@@ -3,6 +3,8 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import AccountBalanceView from "./views/AccountBalanceView.vue";
 import TokenSupplyView from "./views/TokenSupplyView.vue";
+import TransactionView from "./views/TransactionView.vue";
+import TransactionSuccess from "./views/TransactionSuccess.vue";
 import NotFound from "./views/NotFound.vue";
 
 
@@ -25,6 +27,17 @@ export default new Router({
       path: "/token-supply",
       name: "token-supply",
       component: TokenSupplyView
+    },
+    {
+      path: "/transactions",
+      name: "transactions",
+      component: TransactionView
+    },
+    {
+      path: "/transaction-success/:txHash",
+      name: "transaction-success",
+      component: TransactionSuccess,
+      props: true
     },
     {
       path: "*",

@@ -26,6 +26,12 @@ export default {
     return apiService(endpoint, "POST", payload);
   },
 
+//  Transaction
+  sendEthereum(payload) {
+    let endpoint = "/api/transactions/";
+    return apiService(endpoint, "POST", payload);
+  },
+
 //  Pagination
   nextPage(next) {
     let endpoint = next;

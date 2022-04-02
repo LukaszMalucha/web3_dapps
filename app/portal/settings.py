@@ -193,6 +193,7 @@ WEBPACK_LOADER = {
 # WEB3 SETTINGS
 
 WEB3 = Web3(Web3.HTTPProvider(env("INFURA_URL")))
+GANACHE_WEB3 = Web3(Web3.HTTPProvider("http://127.0.0.1:7545"))
 
 if "ETHEREUM_WALLET" in os.environ:
     ETHEREUM_WALLET = env("ETHEREUM_WALLET")
