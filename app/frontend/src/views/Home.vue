@@ -45,6 +45,19 @@
             </div>
           </router-link>
         </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-3">
+          <router-link :to="{name: 'transactions'}">
+            <div class="card card-menu">
+              <div class="card-image">
+                <img src="https://flask-static-files.s3.eu-west-1.amazonaws.com/static/img/greetings.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Ethereum Greetings</span>
+                <p>Set greetings via ETH blockchain</p>
+              </div>
+            </div>
+          </router-link>
+        </div>
 
     </div>
   </div>
