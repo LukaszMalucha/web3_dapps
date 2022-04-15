@@ -14,4 +14,5 @@ urlpatterns = [
     path("account-balance/", views.AccountBalanceView.as_view(), name="account-balance"),
     path("token-supply/", views.TokenSupplyView.as_view(), name="token-supply"),
     path("transactions/", views.SendEthereumView.as_view(), name="transactions"),
+    path("greetings/", views.GreetingsView.as_view(), name="greetings"),
 ]

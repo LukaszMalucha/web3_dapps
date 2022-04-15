@@ -1,10 +1,14 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+
 import AccountBalanceView from "./views/AccountBalanceView.vue";
 import TokenSupplyView from "./views/TokenSupplyView.vue";
 import TransactionView from "./views/TransactionView.vue";
 import TransactionSuccess from "./views/TransactionSuccess.vue";
+
+import GreetingsView from "./views/GreetingsView.vue";
+
 import NotFound from "./views/NotFound.vue";
 
 
@@ -37,6 +41,12 @@ export default new Router({
       path: "/transaction-success/:txHash",
       name: "transaction-success",
       component: TransactionSuccess,
+      props: true
+    },
+    {
+      path: "/greetings",
+      name: "greetings",
+      component: GreetingsView,
       props: true
     },
     {

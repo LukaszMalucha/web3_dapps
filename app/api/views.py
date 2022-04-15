@@ -148,4 +148,18 @@ class SendEthereumView(views.APIView):
 
 
 
+class GreetingsView(views.APIView):
+    """View for Greetings"""
+    authentication_classes = (authentication.TokenAuthentication, authentication.SessionAuthentication)
+    permission_classes = (AllowAny,)
 
+    def get(self, request):
+
+        return Response({"message": "Send Greetings"}, status=status.HTTP_200_OK)
+
+    def post(self, request):
+
+        greetings = request.data["greetings"]
+
+
+        return Response({"greetings": f"{greetings}"}, status=status.HTTP_200_OK)

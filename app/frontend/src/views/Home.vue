@@ -46,7 +46,7 @@
           </router-link>
         </div>
         <div class="col col-12 col-sm-12 col-md-6 col-lg-3">
-          <router-link :to="{name: 'transactions'}">
+          <router-link :to="{name: 'greetings'}">
             <div class="card card-menu">
               <div class="card-image">
                 <img src="https://flask-static-files.s3.eu-west-1.amazonaws.com/static/img/greetings.jpg">

@@ -32,6 +32,12 @@ export default {
     return apiService(endpoint, "POST", payload);
   },
 
+//  Send Greetings
+  sendGreetings(payload) {
+    let endpoint = "/api/greetings/";
+    return apiService(endpoint, "POST", payload);
+  },
+
 //  Pagination
   nextPage(next) {
     let endpoint = next;
