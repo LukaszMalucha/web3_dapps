@@ -25,7 +25,7 @@
                 <div class="col col-12 col-sm-12 col-md-8 plain-element">
                   <div class="card-header">
                     <h6>Send Greetings via Ethereum</h6>
-                    <p>Set greetings phrase in ETH Blockchain</p>
+                    <p>* Needs Ganache localhost connection</p>
                   </div>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-4 plain-element text-end">

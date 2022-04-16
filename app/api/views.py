@@ -159,7 +159,24 @@ class GreetingsView(views.APIView):
 
     def post(self, request):
 
+        # TURN ON GANACHE
+        web3 = settings.GANACHE_WEB3
+
+        web3.eth.defaultAccount = web3.eth.accounts[0]
+
+        address = web3.toChecksumAddress(web3.eth.accounts[0])
+
+        # Deploy first
+        abi = json.loads('[{"inputs":[],"name":"Greeter","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"greet","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"greeting","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"_greeting","type":"string"}],"name":"setGreeting","outputs":[],"stateMutability":"nonpayable","type":"function"}]')
+
+        contract = web3.eth.contract(address=address, abi=abi)
+
         greetings = request.data["greetings"]
+
+        tx_hash = contract.functions.setGreeting(greetings).transact()
+
+        web3.eth.waitForTransactionReceipt(tx_hash)
+
 
 
         return Response({"greetings": f"{greetings}"}, status=status.HTTP_200_OK)
