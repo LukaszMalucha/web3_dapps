@@ -16,9 +16,10 @@ contract Inbox {
     }
     // 'view' - we are not attempting to modify any data with that function
     // 'returns' - only with view or constant
-    function getMessage() public view returns (string memory) {
-        return message;
-    }
+    //  Duplicate of automatically created 'message' function
+    // function getMessage() public view returns (string memory) {
+    //     return message;
+    // }
 
 }
 
