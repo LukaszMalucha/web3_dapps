@@ -9,6 +9,7 @@ const { interface, bytecode } = require('../compile');
 let accounts;
 let inbox;
 
+
 beforeEach(async () => {
 //  List accounts and use on e of them to deploy contract
   accounts = await web3.eth.getAccounts();
@@ -22,6 +23,16 @@ describe('Inbox', () => {
   it('deploys a contract', () => {
     assert.ok(inbox.options.address);
   });
+  it('has a default message', async () => {
+    const message = await inbox.methods.message().call();
+    assert.equal(message, "Hi all!");
+  });
+  it('changes the message', async () => {
+    await inbox.methods.setMessage("hello").send({from: accounts[0]});
+    const message = await inbox.methods.message().call();
+    assert.equal(message, "hello");
+  });
+
 });
 
 

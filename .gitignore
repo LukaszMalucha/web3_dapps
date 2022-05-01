@@ -9,7 +9,7 @@ _old/*
 db.sqlite3
 .DS_Store
 node_modules
-/dist
+deploy.js
 
 
 # local env files
