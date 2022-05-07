@@ -1,0 +1,3 @@
+# ReduxSimpleStarter
+
+npm start
